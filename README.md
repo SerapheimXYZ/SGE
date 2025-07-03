@@ -4,4 +4,3 @@ SGE es un acronimo para "Sistema de gestión de estudiantes" una aplicación web
 gestionar información básica de estudiantes de una institución educativa.
 
 ## Ejemplos de la pagina
-NIGGERS
