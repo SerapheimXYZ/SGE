@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import '../styles/card.css'
 
 export const StudentCard = (DATA) => {
@@ -16,4 +16,4 @@ export const StudentCard = (DATA) => {
       ))}
       </div>
   )
-}
+}*/
