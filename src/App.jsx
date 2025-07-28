@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { StudentList } from './components/StudentList'
+import { StudentCard } from './components/StudentCard'
+import { StudentForm } from './components/StudentForm'
+import { StudentStats } from './components/StudentStats'
 
 export const App = () => {
   const [data, setData] = useState ({
@@ -28,7 +30,9 @@ export const App = () => {
   
   return (
     <div>
-        <StudentList {...data} />
+      <StudentForm/>
+      <StudentStats/>
+      <StudentCard {...data} />
     </div>
   )
 }
