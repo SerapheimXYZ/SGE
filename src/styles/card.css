@@ -1,6 +1,6 @@
 .card-container {
   position: relative;
-  left: 50vw;
+  left: 50%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -10,7 +10,8 @@
 }
 
 .card {
-  background: #fff;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
   border-radius: 16px;
   padding: 2rem 2.5rem;
   width: 100%;
@@ -44,4 +45,35 @@
   display: flex;
   justify-content: space-between;
   width: 70%;
+}
+
+button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+.delte-btn {
+  background-color: #6c757d;
+  color: black;
+}
+
+.delete-btn:hover {
+  background-color: #5a6268;
+  color: white;
+  transform: translateY(-1px);
 }

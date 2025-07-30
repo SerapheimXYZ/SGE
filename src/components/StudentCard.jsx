@@ -13,8 +13,8 @@ export const StudentCard = (DATA) => {
             <p><strong>Promedio académico:</strong> {value.grade}/5</p>
           </div>
           <div className="card-actions">
-            <button>Editar</button>
-            <button>Eliminar</button>
+            <button className="edit-btn">Editar</button>
+            <button className="delete-btn">Eliminar</button>
           </div>  
         </div>
       ))}
