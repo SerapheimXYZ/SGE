@@ -13,9 +13,9 @@ export const StudentCard = (DATA) => {
             <p><strong>Promedio académico:</strong> {value.grade}/5</p>
           </div>
           <div className="card-actions">
-            <button className="edit-btn">Editar</button>
-            <button className="delete-btn">Eliminar</button>
-          </div>  
+            <button className="edit-btn" onClick={() => DATA.onEditStudent(value.id)}>Editar</button>
+            <button className="delete-btn" onClick={() => DATA.onDeleteStudent(value.id)}>Eliminar</button>
+          </div>
         </div>
       ))}
     </div>

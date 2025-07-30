@@ -38,6 +38,21 @@ export const App = () => {
     }))
   }
 
+  const handleEditStudent = (editId, form) => {
+    setData({
+      ...data,
+      [editId]: { ...form, id: editId }
+    });
+  };
+
+  const handleDeleteStudent = (id) => {
+    setData(prevData => {
+      const newData = { ...prevData };
+      delete newData[id];
+      return newData;
+    });
+  };
+
   const openForm = () => {
     setIsFormOpen(true)
   }
@@ -98,9 +113,13 @@ export const App = () => {
       
   
       <StudentStats data={data} />
-      
- 
-      <StudentCard {...data} />
+
+
+      <StudentCard {...data} onEditStudent={handleEditStudent}
+        onDeleteStudent={handleDeleteStudent} 
+        isFormOpen={isFormOpen}
+        onClose={closeForm}
+      />
     </div>
   )
 }
