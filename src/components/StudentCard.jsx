@@ -10,7 +10,7 @@ export const StudentCard = (DATA) => {
           <div className="card-content">
             <p><strong>Edad:</strong> {value.age} años</p>
             <p><strong>Carrera:</strong> {value.career}</p>
-            <p><strong>Promedio académico:</strong> {value.grade}/10</p>
+            <p><strong>Promedio académico:</strong> {value.grade}/5</p>
           </div>
           <div className="card-actions">
             <button>Editar</button>

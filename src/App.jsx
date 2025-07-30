@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react'
 import { StudentCard } from './components/StudentCard'
 import { StudentForm } from './components/StudentForm'
@@ -10,21 +11,21 @@ export const App = () => {
       name: "Carlos",
       age: 23,
       career: "Ingeniería de Sistemas",
-      grade: 8.5
+      grade: 5,
     },
     2: {
       id: 2,
       name: "Ana",
       age: 22,
       career: "Diseño Gráfico",
-      grade: 9.0,
+      grade: 3.5,
     },
     3: {
       id: 3,
       name: "Luis",
       age: 21,
       career: "Ciencias de la Computación",
-      grade: 7.5,
+      grade: 2.9,
     }
   })
 
@@ -46,7 +47,8 @@ export const App = () => {
   }
 
   return (
-    <div>
+    <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto' }}>
+
       <div style={{ 
         position: 'fixed', 
         bottom: '30px', 
@@ -87,13 +89,17 @@ export const App = () => {
         </button>
       </div>
 
+  
       <StudentForm 
         onAddStudent={handleAddStudent}
         isOpen={isFormOpen}
         onClose={closeForm}
       />
       
-      <StudentStats />
+  
+      <StudentStats data={data} />
+      
+ 
       <StudentCard {...data} />
     </div>
   )

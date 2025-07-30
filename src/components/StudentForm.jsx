@@ -88,6 +88,7 @@ export const StudentForm = ({ onAddStudent, isOpen, onClose }) => {
               onChange={handleChange}
               placeholder="Ingresa el nombre del estudiante"
               required
+              minLength="2"
             />
           </div>
 
@@ -100,8 +101,8 @@ export const StudentForm = ({ onAddStudent, isOpen, onClose }) => {
               value={formData.age}
               onChange={handleChange}
               placeholder="Ingresa la edad"
-              min="1"
-              max="100"
+              min="16"
+              max="60"
               required
             />
           </div>
@@ -129,7 +130,7 @@ export const StudentForm = ({ onAddStudent, isOpen, onClose }) => {
               onChange={handleChange}
               placeholder="Ingresa el promedio (0-5)"
               min="0"
-              max="10"
+              max="5"
               step="0.1"
               required
             />
