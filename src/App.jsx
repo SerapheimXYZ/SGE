@@ -30,6 +30,7 @@ export const App = () => {
   })
 
   const [isFormOpen, setIsFormOpen] = useState(false)
+  const [editingData, setEditingData] = useState(null);
 
   const handleAddStudent = (newStudent) => {
     setData(prevData => ({
@@ -38,11 +39,16 @@ export const App = () => {
     }))
   }
 
-  const handleEditStudent = (editId, form) => {
-    setData({
-      ...data,
-      [editId]: { ...form, id: editId }
-    });
+  const handleEditStudent = (id) => {
+    const studentToEdit = students.find(student => student.id === id);
+    setEditingStudent(studentToEdit);
+  };
+  
+  const handleSaveEditedStudent = (updatedStudent) => {
+    setStudents(students.map(student => 
+      student.id === updatedStudent.id ? updatedStudent : student
+    ));
+    setEditingStudent(null);
   };
 
   const handleDeleteStudent = (id) => {
@@ -109,6 +115,9 @@ export const App = () => {
         onAddStudent={handleAddStudent}
         isOpen={isFormOpen}
         onClose={closeForm}
+         editingStudent={editingStudent}
+        onSave={handleSaveEditedStudent}
+        onCancel={() => setEditingStudent(null)}
       />
       
   
